@@ -116,6 +116,10 @@ q::before, q::after {
   position: relative;
 }
 .section .event_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 11.4583333333vw;
   color: #4e49f1;
   font-size: 3.3333333333vw;
   font-weight: 700;
@@ -125,6 +129,7 @@ q::before, q::after {
   font-size: 2.0833333333vw;
   line-height: 2.7083333333vw;
   text-align: center;
+  padding-top: 2.9166666667vw;
 }
 .section .event_text span {
   color: #ec008c;
@@ -154,10 +159,6 @@ q::before, q::after {
 .section.step1 {
   height: 109.375vw;
   background-color: rgba(0, 0, 0, 0.3);
-  padding-top: 4.1666666667vw;
-}
-.section.step1 .event_text {
-  padding-top: 6.4583333333vw;
 }
 .section.step1 .item1, .section.step1 .item2, .section.step1 .arrow {
   font-size: 2.0833333333vw;
@@ -204,7 +205,9 @@ q::before, q::after {
   right: 0;
 }
 .side_navigation ul li a {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 2px solid #fff;
   width: 5vw;
   height: 5vw;
@@ -212,7 +215,6 @@ q::before, q::after {
   font-size: 2.1875vw;
   box-sizing: border-box;
   text-align: center;
-  line-height: 5vw;
   font-weight: 700;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }
