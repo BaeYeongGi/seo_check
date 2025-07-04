@@ -6,8 +6,8 @@ html {
   box-sizing: inherit;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-dl, dd, ol, ul, figure, hr, fieldset, legend {
+body, nav, aside, section, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+dl, dd, ol, ul, li, figure, hr, fieldset, legend, a {
   margin: 0;
   padding: 0;
 }
@@ -22,7 +22,7 @@ fieldset, img {
 
 body {
   min-height: 100vh;
-  line-height: 1.5;
+  // line-height: 1.5;
   font-family: $font;
   background: #fff;
   color: #222;
@@ -73,3 +73,5 @@ q::before, q::after {
   content: '';
   content: none;
 }
+
+
