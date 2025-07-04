@@ -1,0 +1,25 @@
+{
+  "name": "com2us",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=14.16.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "baeyeonggi",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "browser-sync": "^3.0.4",
+    "gulp-cached": "^1.1.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-sourcemaps": "^3.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.74.1"
+  }
+}
