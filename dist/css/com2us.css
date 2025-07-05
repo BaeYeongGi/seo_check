@@ -192,7 +192,7 @@ q::before, q::after {
   margin-top: 8.6458333333vw;
 }
 .section.step2 {
-  height: 119.7916666667vw;
+  height: 120.1041666667vw;
   background-color: rgba(0, 0, 0, 0.4);
 }
 .section.step2 .ticket {
@@ -223,9 +223,103 @@ q::before, q::after {
   position: absolute;
   left: 62.5vw;
 }
+.section.step2 .event_mission {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 79.1666666667vw;
+  margin: 30.5208333333vw auto 0 auto;
+}
+.section.step2 .event_mission li {
+  display: flex;
+  width: 38.75vw;
+  margin-bottom: 1.4583333333vw;
+}
+.section.step2 .event_mission li.stamp_taken .number, .section.step2 .event_mission li.stamp_complete .number {
+  position: relative;
+}
+.section.step2 .event_mission li.stamp_taken .number::after, .section.step2 .event_mission li.stamp_complete .number::after {
+  content: "";
+  display: block;
+  width: 8.6458333333vw;
+  height: 8.6458333333vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.section.step2 .event_mission li.stamp_taken .number::after {
+  background-image: url("../images/img_stamp_taken.webp");
+}
+.section.step2 .event_mission li.stamp_complete .number::after {
+  background-image: url("../images/img_stamp_complete.webp");
+}
+.section.step2 .event_mission li .number {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 10.7291666667vw;
+  text-align: center;
+  margin-bottom: 0.7291666667vw;
+  font-size: 2.0833333333vw;
+}
+.section.step2 .event_mission li .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 27.9166666667vw;
+  height: 10.8333333333vw;
+  text-align: center;
+  font-size: 2.0833333333vw;
+  line-height: 2.7083333333vw;
+}
+.section.step2 .event_mission li .content .count {
+  display: block;
+  color: #ffff6b;
+}
 .section.step_event {
   height: 80.8333333333vw;
   background-color: rgba(0, 0, 0, 0.6);
+}
+.section.step_event .event_title {
+  font-size: 2.9166666667vw;
+  line-height: 3.75vw;
+  color: #ffff6b;
+}
+.section.step_event .gauge_box {
+  width: 79.375vw;
+  height: 6.875vw;
+  margin: 3.125vw auto 0 auto;
+  background-color: #6e66a4;
+  border: 2px solid #5c4fab;
+  border-radius: 3.4375vw;
+  position: relative;
+}
+.section.step_event .gauge_box .gauge {
+  display: block;
+  height: 100%;
+  border-radius: 3.4375vw;
+  background: linear-gradient(90deg, rgb(63, 187, 254) 0%, rgb(164, 66, 255) 100%);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 2px solid #fff;
+}
+.section.step_event .gauge_box .gauge::after {
+  content: "";
+  display: block;
+  width: 5.3125vw;
+  height: 6.4583333333vw;
+  background-image: url("../images/img_penguin.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(-50%) scaleX(-1);
+  position: absolute;
+  top: 50%;
+  right: -0.8333333333vw;
 }
 .side_navigation {
   position: fixed;

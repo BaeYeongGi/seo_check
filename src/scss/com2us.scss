@@ -3,6 +3,8 @@
 @import "../scss/reset.scss";
 
 $device: 960;
+$imgStampTaken: "../images/img_stamp_taken.webp";
+$imgStampComplete: "../images/img_stamp_complete.webp";
 
 @function size($n){
   @return calc($n/$device * 100vw);
@@ -114,7 +116,7 @@ $device: 960;
     }
   }
   &.step2 {
-    height:size(1150);
+    height:size(1153);
     background-color:rgba(0,0,0,0.4);
     .ticket {
       text-align:center;
@@ -144,10 +146,122 @@ $device: 960;
       position:absolute;
       left:size(600);
     }
+    .event_mission {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content: space-between;
+      width:size(760);
+      margin:size(293) auto 0 auto;
+      li {
+        display:flex;
+        width:size(372);
+        margin-bottom:size(14);
+        &.stamp_taken, &.stamp_complete {
+          .number {
+            position:relative;
+            &::after {
+              content:'';
+              display:block;
+              width:size(83);
+              height:size(83);
+              background-size:contain;
+              background-repeat: no-repeat;
+              position:absolute;
+              top:50%;
+              left:50%;
+              transform:translate(-50%, -50%);
+            }
+          }
+        }
+        &.stamp_taken {
+          .number {
+            &::after {
+              background-image:url($imgStampTaken);
+            }
+          }
+        }
+        &.stamp_complete {
+          .number {
+            &::after {
+              background-image:url($imgStampComplete);
+            }
+          }
+        }        
+        .number {
+          display:flex;
+          align-items:flex-end;
+          justify-content: center;
+          width:size(103);
+          text-align:center;
+          margin-bottom:size(7);
+          font-size:size(20);
+        }
+        .content {
+          display:flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          width:size(268);
+          height:size(104);
+          text-align:center;
+          font-size:size(20);
+          line-height:size(26);
+          .count {
+            display:block;
+            color:#ffff6b;
+          }
+        }
+      }
+    }
   }
   &.step_event {
     height:size(776);
     background-color:rgba(0,0,0,0.6);
+    .event_title {
+      font-size:size(28);
+      line-height:size(36);
+      color:#ffff6b;
+    }
+    .gauge_box {
+      width:size(762);
+      height:size(66);
+      margin:size(30) auto 0 auto;
+      background-color:#6e66a4;
+      border:2px solid #5c4fab;
+      border-radius:size(33);
+      position:relative;
+      .gauge_score {
+        li {
+
+        }
+      }
+      .prize {
+
+      }
+      .gauge {
+        display:block;
+        height:100%;
+        border-radius:size(33);
+        background:linear-gradient(90deg,rgba(63, 187, 254, 1) 0%, rgba(164, 66, 255, 1) 100%);
+        position:absolute;
+        left:0;
+        top:0;
+        border:2px solid #fff;
+        &::after {
+          content:'';
+          display:block;
+          width:size(51);
+          height:size(62);
+          background-image:url('../images/img_penguin.webp');
+          background-size:contain;
+          background-repeat: no-repeat;
+          transform:translateY(-50%) scaleX(-1);
+          position:absolute;
+          top:50%;
+          right:- size(8);
+        }
+      }
+    }    
   }
   &.step3 {
 
