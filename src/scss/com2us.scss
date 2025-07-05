@@ -28,7 +28,7 @@ $device: 960;
 }
 
 .event_wrap {
-  background-image:url("../images/bg.webp");
+  background-image:url("../images/background.webp");
   background-size:cover;
   background-position:top center;
   padding-top:size(400);
@@ -37,7 +37,6 @@ $device: 960;
 
 .section {
   position:relative;
-
   .event_title {
     display:flex;
     justify-content:center;
@@ -48,9 +47,7 @@ $device: 960;
     font-weight:700;
     text-align:center;
   }
-
   .event_text {
-
     font-size:size(20);
     line-height:size(26);
     text-align:center;
@@ -84,9 +81,6 @@ $device: 960;
   &.step1 {
     height:size(1050);
     background-color:rgba(0,0,0,0.3);
-
-    .event_text {
-    }
     .item1, .item2, .arrow {
       font-size:size(20);
       color:#fff;
@@ -122,6 +116,34 @@ $device: 960;
   &.step2 {
     height:size(1150);
     background-color:rgba(0,0,0,0.4);
+    .ticket {
+      text-align:center;
+      font-weight:700;
+      position:absolute;
+      top:size(410);
+      left:size(277);
+      dt {
+        font-size:size(20);
+        color:#363636;
+        line-height:size(26);
+        margin-bottom:size(14);
+      }
+      dd {
+        font-size:size(38);
+        color:#ffff6b;
+      }
+    }
+    .slide {
+      width:size(205);
+      position:absolute;
+      top:size(380);
+      left:size(510);
+    }
+    .penguin {
+      width:size(100);
+      position:absolute;
+      left:size(600);
+    }
   }
   &.step_event {
     height:size(776);
@@ -169,3 +191,8 @@ $device: 960;
   }
 }
 
+.footer {
+  width:size(867);
+  margin:0 auto;
+  padding-left:size(58);
+}

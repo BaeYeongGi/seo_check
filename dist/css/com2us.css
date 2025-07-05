@@ -105,7 +105,7 @@ q::before, q::after {
 }
 
 .event_wrap {
-  background-image: url("../images/bg.webp");
+  background-image: url("../images/background.webp");
   background-size: cover;
   background-position: top center;
   padding-top: 41.6666666667vw;
@@ -195,6 +195,34 @@ q::before, q::after {
   height: 119.7916666667vw;
   background-color: rgba(0, 0, 0, 0.4);
 }
+.section.step2 .ticket {
+  text-align: center;
+  font-weight: 700;
+  position: absolute;
+  top: 42.7083333333vw;
+  left: 28.8541666667vw;
+}
+.section.step2 .ticket dt {
+  font-size: 2.0833333333vw;
+  color: #363636;
+  line-height: 2.7083333333vw;
+  margin-bottom: 1.4583333333vw;
+}
+.section.step2 .ticket dd {
+  font-size: 3.9583333333vw;
+  color: #ffff6b;
+}
+.section.step2 .slide {
+  width: 21.3541666667vw;
+  position: absolute;
+  top: 39.5833333333vw;
+  left: 53.125vw;
+}
+.section.step2 .penguin {
+  width: 10.4166666667vw;
+  position: absolute;
+  left: 62.5vw;
+}
 .section.step_event {
   height: 80.8333333333vw;
   background-color: rgba(0, 0, 0, 0.6);
@@ -226,4 +254,10 @@ q::before, q::after {
 }
 .side_navigation ul li:nth-of-type(1) a {
   background: linear-gradient(180deg, #F26B74 0%, #AD52F7 100%);
+}
+
+.footer {
+  width: 90.3125vw;
+  margin: 0 auto;
+  padding-left: 6.0416666667vw;
 }
