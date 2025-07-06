@@ -10,6 +10,10 @@ $imgStampComplete: "../images/img_stamp_complete.webp";
   @return calc($n/$device * 100vw);
 }
 
+body {
+  letter-spacing:size(0.2);
+}
+
 .visually_hidden {
   position: absolute;
   width: 1px;
@@ -39,6 +43,7 @@ $imgStampComplete: "../images/img_stamp_complete.webp";
 
 .section {
   position:relative;
+  
   .event_title {
     display:flex;
     justify-content:center;
@@ -61,7 +66,6 @@ $imgStampComplete: "../images/img_stamp_complete.webp";
   }
   .event_notice {
     width:size(820);
-    padding-left:size(26);
     margin:0 auto;
     li {
       font-size:size(20);
@@ -112,6 +116,7 @@ $imgStampComplete: "../images/img_stamp_complete.webp";
       right:size(107);
     }
     .event_notice {
+      padding-left:size(26);
       margin-top:size(83);
     }
   }
@@ -215,7 +220,9 @@ $imgStampComplete: "../images/img_stamp_complete.webp";
     }
   }
   &.step_event {
+    width:size(762);
     height:size(776);
+    margin:0 auto;
     background-color:rgba(0,0,0,0.6);
     .event_title {
       font-size:size(28);
@@ -223,7 +230,6 @@ $imgStampComplete: "../images/img_stamp_complete.webp";
       color:#ffff6b;
     }
     .gauge_box {
-      width:size(762);
       height:size(66);
       margin:size(30) auto 0 auto;
       background-color:#6e66a4;
@@ -231,13 +237,19 @@ $imgStampComplete: "../images/img_stamp_complete.webp";
       border-radius:size(33);
       position:relative;
       .gauge_score {
+        display:flex;
+        width:100%;
+        margin:size(69) 0 0 0;
         li {
-
+          text-align:right;
+          width:14.2857%;
+          font-size:size(20);
+          padding-right:size(2);
+          font-weight:700;
         }
       }
-      .prize {
 
-      }
+
       .gauge {
         display:block;
         height:100%;
@@ -262,9 +274,37 @@ $imgStampComplete: "../images/img_stamp_complete.webp";
         }
       }
     }    
+    .event_items {
+      margin:size(52) auto 0 auto;
+      display:flex;
+      // justify-content: space-between;
+      li {
+        display:flex;
+        align-items: flex-end;
+        justify-content: center;
+        width:size(101);
+        height:size(136);
+        text-align:center;
+        font-size:size(20);
+        padding-bottom:size(10);
+        &:not(:last-child) {
+          margin-right:size(9);
+        }
+      }
+    }
+    .prize {
+      font-size:size(22);
+      color:#ec008c;
+      text-align:right;
+      margin: size(19) size(66) 0 0;
+    }
+    .event_notice {
+      margin:size(22) 0 0 0;
+    }
   }
   &.step3 {
-
+    background-color:rgba(0,0,0,0.2);
+    height:size(1000);
   }
 }
 

@@ -85,6 +85,10 @@ q::before, q::after {
   content: none;
 }
 
+body {
+  letter-spacing: 0.0208333333vw;
+}
+
 .visually_hidden {
   position: absolute;
   width: 1px;
@@ -137,7 +141,6 @@ q::before, q::after {
 }
 .section .event_notice {
   width: 85.4166666667vw;
-  padding-left: 2.7083333333vw;
   margin: 0 auto;
 }
 .section .event_notice li {
@@ -189,6 +192,7 @@ q::before, q::after {
   right: 11.1458333333vw;
 }
 .section.step1 .event_notice {
+  padding-left: 2.7083333333vw;
   margin-top: 8.6458333333vw;
 }
 .section.step2 {
@@ -281,7 +285,9 @@ q::before, q::after {
   color: #ffff6b;
 }
 .section.step_event {
+  width: 79.375vw;
   height: 80.8333333333vw;
+  margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.6);
 }
 .section.step_event .event_title {
@@ -290,13 +296,24 @@ q::before, q::after {
   color: #ffff6b;
 }
 .section.step_event .gauge_box {
-  width: 79.375vw;
   height: 6.875vw;
   margin: 3.125vw auto 0 auto;
   background-color: #6e66a4;
   border: 2px solid #5c4fab;
   border-radius: 3.4375vw;
   position: relative;
+}
+.section.step_event .gauge_box .gauge_score {
+  display: flex;
+  width: 100%;
+  margin: 7.1875vw 0 0 0;
+}
+.section.step_event .gauge_box .gauge_score li {
+  text-align: right;
+  width: 14.2857%;
+  font-size: 2.0833333333vw;
+  padding-right: 0.2083333333vw;
+  font-weight: 700;
 }
 .section.step_event .gauge_box .gauge {
   display: block;
@@ -321,6 +338,37 @@ q::before, q::after {
   top: 50%;
   right: -0.8333333333vw;
 }
+.section.step_event .event_items {
+  margin: 5.4166666667vw auto 0 auto;
+  display: flex;
+}
+.section.step_event .event_items li {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 10.5208333333vw;
+  height: 14.1666666667vw;
+  text-align: center;
+  font-size: 2.0833333333vw;
+  padding-bottom: 1.0416666667vw;
+}
+.section.step_event .event_items li:not(:last-child) {
+  margin-right: 0.9375vw;
+}
+.section.step_event .prize {
+  font-size: 2.2916666667vw;
+  color: #ec008c;
+  text-align: right;
+  margin: 1.9791666667vw 6.875vw 0 0;
+}
+.section.step_event .event_notice {
+  margin: 2.2916666667vw 0 0 0;
+}
+.section.step3 {
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 104.1666666667vw;
+}
+
 .side_navigation {
   position: fixed;
   top: 9.0625vw;
