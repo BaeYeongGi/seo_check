@@ -85,21 +85,21 @@ body {
     }
   }
   &.step1 {
+    width:size(762);
     height:size(1050);
+    margin:0 auto;
     background-color:rgba(0,0,0,0.3);
-    .item1, .item2, .arrow {
+    .item_wrap {
+      display:flex;
+      justify-content: space-between;
       font-size:size(20);
       color:#fff;
     }
     .item1, .item2 {
-      display:inline-block;
+      display:block;
       text-align:center;
       width:size(360);
       margin-top:size(324);
-    }
-    .item1 {
-      margin-right:size(40);
-      margin-left:size(100);
     }
     .arrow {
       position:absolute;
@@ -113,10 +113,9 @@ body {
       position:absolute; 
       top:size(436);
       text-align:center;
-      right:size(107);
+      right:size(8);
     }
     .event_notice {
-      padding-left:size(26);
       margin-top:size(83);
     }
   }
@@ -221,7 +220,7 @@ body {
   }
   &.step_event {
     width:size(762);
-    height:size(776);
+    height:size(766);
     margin:0 auto;
     background-color:rgba(0,0,0,0.6);
     .event_title {
@@ -233,7 +232,7 @@ body {
       height:size(66);
       margin:size(30) auto 0 auto;
       background-color:#6e66a4;
-      border:2px solid #5c4fab;
+      border:size(2) solid #5c4fab;
       border-radius:size(33);
       position:relative;
       .gauge_score {
@@ -248,8 +247,6 @@ body {
           font-weight:700;
         }
       }
-
-
       .gauge {
         display:block;
         height:100%;
@@ -258,7 +255,7 @@ body {
         position:absolute;
         left:0;
         top:0;
-        border:2px solid #fff;
+        border:size(2) solid #fff;
         &::after {
           content:'';
           display:block;
@@ -277,7 +274,6 @@ body {
     .event_items {
       margin:size(52) auto 0 auto;
       display:flex;
-      // justify-content: space-between;
       li {
         display:flex;
         align-items: flex-end;
@@ -304,7 +300,7 @@ body {
   }
   &.step3 {
     background-color:rgba(0,0,0,0.2);
-    height:size(1000);
+    height:size(1042);
   }
 }
 
@@ -318,7 +314,7 @@ body {
         display:flex;
         justify-content: center;
         align-items: center;
-        border:2px solid #fff;
+        border:size(2) solid #fff;
         width:size(48);
         height:size(48);
         color:#fff;
@@ -326,7 +322,7 @@ body {
         box-sizing:border-box;
         text-align:center;
         font-weight:700;
-        box-shadow:0px 4px 8px rgba(0, 0, 0, 0.5);
+        box-shadow:0 size(4) size(8) rgba(0, 0, 0, 0.5);
       }
       &:not(:last-child){
         margin-bottom:size(8);

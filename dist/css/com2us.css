@@ -160,22 +160,22 @@ body {
   display: none;
 }
 .section.step1 {
+  width: 79.375vw;
   height: 109.375vw;
+  margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.3);
 }
-.section.step1 .item1, .section.step1 .item2, .section.step1 .arrow {
+.section.step1 .item_wrap {
+  display: flex;
+  justify-content: space-between;
   font-size: 2.0833333333vw;
   color: #fff;
 }
 .section.step1 .item1, .section.step1 .item2 {
-  display: inline-block;
+  display: block;
   text-align: center;
   width: 37.5vw;
   margin-top: 33.75vw;
-}
-.section.step1 .item1 {
-  margin-right: 4.1666666667vw;
-  margin-left: 10.4166666667vw;
 }
 .section.step1 .arrow {
   position: absolute;
@@ -189,10 +189,9 @@ body {
   position: absolute;
   top: 45.4166666667vw;
   text-align: center;
-  right: 11.1458333333vw;
+  right: 0.8333333333vw;
 }
 .section.step1 .event_notice {
-  padding-left: 2.7083333333vw;
   margin-top: 8.6458333333vw;
 }
 .section.step2 {
@@ -286,7 +285,7 @@ body {
 }
 .section.step_event {
   width: 79.375vw;
-  height: 80.8333333333vw;
+  height: 79.7916666667vw;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.6);
 }
@@ -299,7 +298,7 @@ body {
   height: 6.875vw;
   margin: 3.125vw auto 0 auto;
   background-color: #6e66a4;
-  border: 2px solid #5c4fab;
+  border: 0.2083333333vw solid #5c4fab;
   border-radius: 3.4375vw;
   position: relative;
 }
@@ -323,7 +322,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  border: 2px solid #fff;
+  border: 0.2083333333vw solid #fff;
 }
 .section.step_event .gauge_box .gauge::after {
   content: "";
@@ -366,7 +365,7 @@ body {
 }
 .section.step3 {
   background-color: rgba(0, 0, 0, 0.2);
-  height: 104.1666666667vw;
+  height: 108.5416666667vw;
 }
 
 .side_navigation {
@@ -378,7 +377,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #fff;
+  border: 0.2083333333vw solid #fff;
   width: 5vw;
   height: 5vw;
   color: #fff;
@@ -386,7 +385,7 @@ body {
   box-sizing: border-box;
   text-align: center;
   font-weight: 700;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.4166666667vw 0.8333333333vw rgba(0, 0, 0, 0.5);
 }
 .side_navigation ul li:not(:last-child) {
   margin-bottom: 0.8333333333vw;
