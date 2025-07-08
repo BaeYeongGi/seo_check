@@ -14,9 +14,17 @@ $imgStampComplete: "../images/img_stamp_complete.webp";
   @return calc($n/$device * 100vw);
 }
 
-
 body {
   letter-spacing:size(0.2);
+}
+
+.time_zone {
+  position:absolute;
+  top:size(20);
+  left:size(40);
+  font-size:size(20);
+  line-height:size(26);
+  color:$colorDefault_1;
 }
 
 .visually_hidden {
@@ -29,13 +37,6 @@ body {
   clip: rect(0 0 0 0);
   white-space: nowrap;
   border: 0;
-}
-
-.background {
-  width:100%;
-  position:absolute;
-  top:0;
-  left:0;
 }
 
 .event_wrap {
@@ -142,9 +143,10 @@ body {
     }
     .badge {
       font-size:size(20);
+      line-height:size(26);
       color:$colorPoint_2;
       position:absolute; 
-      top:size(436);
+      top:size(435);
       text-align:center;
       right:size(8);
     }

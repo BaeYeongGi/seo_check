@@ -90,6 +90,15 @@ body {
   letter-spacing: 0.0208333333vw;
 }
 
+.time_zone {
+  position: absolute;
+  top: 2.0833333333vw;
+  left: 4.1666666667vw;
+  font-size: 2.0833333333vw;
+  line-height: 2.7083333333vw;
+  color: #363636;
+}
+
 .visually_hidden {
   position: absolute;
   width: 1px;
@@ -100,13 +109,6 @@ body {
   clip: rect(0 0 0 0);
   white-space: nowrap;
   border: 0;
-}
-
-.background {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .event_wrap {
@@ -211,9 +213,10 @@ body {
 }
 .section.step1 .badge {
   font-size: 2.0833333333vw;
+  line-height: 2.7083333333vw;
   color: #ffff6b;
   position: absolute;
-  top: 45.4166666667vw;
+  top: 45.3125vw;
   text-align: center;
   right: 0.8333333333vw;
 }
