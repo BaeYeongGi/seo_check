@@ -1,7 +1,7 @@
 @font-face {
  font-family: 'NanumBarunGothic';
  font-weight: 400;
- font-display: auto;
+ font-display: swap;
  src: local("나눔바른고딕"),
       url('../fonts/NanumBarunGothicSubset.woff2') format('woff2'),
       url('../fonts/NanumBarunGothicSubset.woff') format('woff');
@@ -9,7 +9,7 @@
 @font-face {
  font-family: 'NanumBarunGothic';
  font-weight: 700;
- font-display: auto;
+ font-display: swap;
  src: local("나눔바른고딕 Bold"),
       url('../fonts/NanumBarunGothicBoldSubset.woff2') format('woff2'),
       url('../fonts/NanumBarunGothicBoldSubset.woff') format('woff');
