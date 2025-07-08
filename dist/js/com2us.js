@@ -41,6 +41,8 @@
     const observedEls = document.querySelectorAll('.observe');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
+          console.log('entry', entry.isIntersecting)
+
         if (entry.isIntersecting) {
           entry.target.classList.add('ani');          
           observer.unobserve(entry.target);
@@ -50,8 +52,8 @@
         }
       });
     }, {
-      threshold: 0.3,
-      rootMargin: '-70px'
+      threshold: 1,
+      rootMargin: '0px 0px -70px 0px'
     });
     observedEls.forEach(el => observer.observe(el));
   }
