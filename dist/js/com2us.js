@@ -36,13 +36,10 @@
     }
     gauge.style.width = percent + '%';
   }
-
-  function pageScrollAnimation(){
+  function setScrollAnimation(){
     const observedEls = document.querySelectorAll('.observe');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-          console.log('entry', entry.isIntersecting)
-
         if (entry.isIntersecting) {
           entry.target.classList.add('ani');          
           observer.unobserve(entry.target);
@@ -57,7 +54,5 @@
     });
     observedEls.forEach(el => observer.observe(el));
   }
-  pageScrollAnimation();
-
-
+  setScrollAnimation();
 })();

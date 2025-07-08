@@ -184,22 +184,26 @@ body {
 .section.step1 {
   height: 109.375vw;
 }
-.section.step1 .item_wrap {
-  display: flex;
-  justify-content: space-between;
+.section.step1 .item1, .section.step1 .item2 {
   font-size: 2.0833333333vw;
   color: #fff;
-}
-.section.step1 .item1, .section.step1 .item2 {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   width: 37.5vw;
-  height: 8.3333333333vw;
-  margin-top: 30.625vw;
+  position: absolute;
+  top: 75vw;
+}
+.section.step1 .item1 {
+  left: 0;
+}
+.section.step1 .item2 {
+  right: 0;
 }
 .section.step1 .arrow {
+  font-size: 2.0833333333vw;
+  color: #fff;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -214,7 +218,8 @@ body {
   right: 0.8333333333vw;
 }
 .section.step1 .event_notice {
-  margin-top: 6.0416666667vw;
+  position: absolute;
+  top: 86.4583333333vw;
 }
 .section.step2 {
   height: 120.1041666667vw;
@@ -270,7 +275,9 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 79.1666666667vw;
-  margin: 30.5208333333vw auto 0 auto;
+  position: absolute;
+  top: 66.5625vw;
+  left: 0;
 }
 .section.step2 .event_mission li {
   display: flex;
