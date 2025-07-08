@@ -9,7 +9,8 @@
         }
       });
     }, {
-      rootMargin: '-100px'
+      threshold: 0.3,
+      rootMargin: '-70px'
     });
     observedEls.forEach(el => observer.observe(el));
   }
