@@ -66,23 +66,23 @@ function html(){
   })
 }
 
-function js(){
-  return new Promise((resolve, reject) => {
-    try {
-      watcher["js"] = [PATH.input + "js/*"];
-      src(watcher["js"])
-        // .pipe(sourceMaps.init())
-        .on("error", function(err){
-          console.log(err)
-        })
-        // .pipe(sourceMaps.write("./"))
-        .pipe(dest(PATH.output + "js"));
-      resolve();
-    } catch(e) {
-      reject(e);
-    }
-  })
-}
+// function js(){
+//   return new Promise((resolve, reject) => {
+//     try {
+//       watcher["js"] = [PATH.input + "js/*"];
+//       src(watcher["js"])
+//         // .pipe(sourceMaps.init())
+//         .on("error", function(err){
+//           console.log(err)
+//         })
+//         // .pipe(sourceMaps.write("./"))
+//         .pipe(dest(PATH.output + "js"));
+//       resolve();
+//     } catch(e) {
+//       reject(e);
+//     }
+//   })
+// }
 
 function scss(){
   return new Promise((resolve, reject) => {
@@ -110,10 +110,10 @@ function scss(){
 
 async function com2us(){
   PATH = await getPath();
-  await js();
+  // await js();
   await scss();
   await html();
-  watch(watcher["js"], js);
+  // watch(watcher["js"], js);
   watch(watcher["scss"], scss);
   watch(watcher["html"], html);
   server();
