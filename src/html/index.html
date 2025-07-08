@@ -158,8 +158,8 @@
           각 횟수 별 보상을 지급해 드려요.
         </p>
         <p class="event_channel_title">New Channel</p>
-        <button class="event_button observe" type="button" aria-controls="TV 시청 보상 정보">
-          <img src="../images/img_event_antenna.webp" alt="버튼에 들어있는 안테나"/>
+        <button class="event_button observe" type="button" aria-expanded="false" aria-controls="TV 시청 보상 정보">
+          <img src="../images/img_event_antenna.webp" alt="버튼에 들어있는 안테나" role="presentation" loading="lazy"/>
           일별 벨 TV 시청 횟수<br/>보상 정보 확인하기!
         </button>
         <ul class="event_mission">
@@ -169,11 +169,11 @@
           </li>
           <li>
             <div class="title">5회 보상</div>
-            <span class="stamp_taken observe" aria-label="벨 TV 5회 시청 완료: 던전 입장권 1개 획득"></span>
+            <div class="stamp_taken observe"><span class="visually_hidden" aria-label="벨 TV 5회 시청 완료: 던전 입장권 1개 획득">x1</span></div>
           </li>
           <li>
             <div class="title">10회 보상</div>
-            <span class="stamp_complete observe" aria-label="벨 TV 10회 시청 완료: 공룡 테마 코스튬 뽑기 1개"></span>
+            <div class="stamp_complete observe"><span class="visually_hidden" aria-label="벨 TV 10회 시청 완료: 공룡 테마 코스튬 뽑기 1개">x1</span></div>
           </li>        
         </ul>
         <ul class="event_notice">

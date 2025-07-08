@@ -497,7 +497,7 @@ body {
   color: #fff;
   line-height: 2.7083333333vw;
 }
-.section.step3 .event_mission li .count, .section.step3 .event_mission li > span {
+.section.step3 .event_mission li .count, .section.step3 .event_mission li > div {
   height: 11.875vw;
   color: #363636;
 }
