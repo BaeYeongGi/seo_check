@@ -369,6 +369,7 @@ body {
   transform: translate(-50%, -50%);
   background-repeat: no-repeat;
   background-size: contain;
+  margin-top: -1.0416666667vw;
 }
 .section.step_event .event_items li.stamp_taken::after {
   background-image: url("../images/img_stamp_taken.webp");

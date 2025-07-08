@@ -303,6 +303,7 @@ body {
             width:size(87);
             height:size(87);
             @include stampAlign;
+            margin-top:- size(10);
           }
         }
         &.stamp_taken {
