@@ -163,6 +163,22 @@ body {
 .section .event_notice li:last-child::before {
   display: none;
 }
+.section .stamp_taken.ani::after, .section .stamp_complete.ani::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+.section .stamp_taken::after, .section .stamp_complete::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.8);
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0;
+  transition-duration: 0.5s;
+  transition-property: transform, opacity;
+  transition-timing-function: cubic-bezier(0.37, 0, 1, 0.63);
+}
 .section.step1 {
   height: 109.375vw;
 }
@@ -173,10 +189,13 @@ body {
   color: #fff;
 }
 .section.step1 .item1, .section.step1 .item2 {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   width: 37.5vw;
-  margin-top: 33.75vw;
+  height: 8.3333333333vw;
+  margin-top: 30.625vw;
 }
 .section.step1 .arrow {
   position: absolute;
@@ -193,7 +212,7 @@ body {
   right: 0.8333333333vw;
 }
 .section.step1 .event_notice {
-  margin-top: 8.6458333333vw;
+  margin-top: 6.0416666667vw;
 }
 .section.step2 {
   height: 120.1041666667vw;
@@ -219,12 +238,30 @@ body {
   width: 21.3541666667vw;
   position: absolute;
   top: 39.5833333333vw;
-  left: 53.125vw;
+  left: 42.7083333333vw;
+}
+@keyframes penguinSlide {
+  0% {
+    top: 36.6666666667vw;
+    left: 52.0833333333vw;
+  }
+  100% {
+    top: 53.125vw;
+    left: 40.625vw;
+  }
 }
 .section.step2 .penguin {
   width: 10.4166666667vw;
   position: absolute;
-  left: 62.5vw;
+  top: 36.6666666667vw;
+  left: 52.0833333333vw;
+}
+.section.step2 .penguin.ani {
+  animation-name: penguinSlide;
+  animation-duration: 1.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 .section.step2 .event_mission {
   display: flex;
@@ -236,38 +273,32 @@ body {
 .section.step2 .event_mission li {
   display: flex;
   width: 38.75vw;
+  height: 10.8333333333vw;
   margin-bottom: 1.4583333333vw;
-}
-.section.step2 .event_mission li.stamp_taken .number, .section.step2 .event_mission li.stamp_complete .number {
-  position: relative;
-}
-.section.step2 .event_mission li.stamp_taken .number::after, .section.step2 .event_mission li.stamp_complete .number::after {
-  content: "";
-  display: block;
-  width: 8.6458333333vw;
-  height: 8.6458333333vw;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.section.step2 .event_mission li.stamp_taken .number::after {
-  background-image: url("../images/img_stamp_taken.webp");
-}
-.section.step2 .event_mission li.stamp_complete .number::after {
-  background-image: url("../images/img_stamp_complete.webp");
 }
 .section.step2 .event_mission li .number {
   display: flex;
   align-items: flex-end;
   justify-content: center;
   width: 10.7291666667vw;
+  height: 100%;
   text-align: center;
-  margin-bottom: 0.7291666667vw;
+  padding-bottom: 0.7291666667vw;
   font-size: 2.0833333333vw;
   color: #363636;
+  position: relative;
+}
+.section.step2 .event_mission li .number.stamp_taken::after, .section.step2 .event_mission li .number.stamp_complete::after {
+  content: "";
+  display: block;
+  width: 8.6458333333vw;
+  height: 8.6458333333vw;
+}
+.section.step2 .event_mission li .number.stamp_taken::after {
+  background-image: url("../images/img_stamp_taken.webp");
+}
+.section.step2 .event_mission li .number.stamp_complete::after {
+  background-image: url("../images/img_stamp_complete.webp");
 }
 .section.step2 .event_mission li .content {
   display: flex;
@@ -275,7 +306,7 @@ body {
   justify-content: center;
   flex-direction: column;
   width: 27.9166666667vw;
-  height: 10.8333333333vw;
+  height: 100%;
   text-align: center;
   font-size: 2.0833333333vw;
   line-height: 2.7083333333vw;
@@ -314,6 +345,7 @@ body {
   padding-right: 0.2083333333vw;
   font-weight: 700;
 }
+@keyframes gauge {}
 .section.step_event .gauge_box .gauge {
   display: block;
   height: 100%;
@@ -323,6 +355,10 @@ body {
   left: 0;
   top: 0;
   border: 0.2083333333vw solid #fff;
+  width: 0;
+}
+.section.step_event .gauge_box .gauge.ani {
+  transition: all 0.2s;
 }
 .section.step_event .gauge_box .gauge::after {
   content: "";
@@ -363,12 +399,6 @@ body {
   display: block;
   width: 9.0625vw;
   height: 9.0625vw;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-repeat: no-repeat;
-  background-size: contain;
   margin-top: -1.0416666667vw;
 }
 .section.step_event .event_items li.stamp_taken::after {
@@ -397,6 +427,14 @@ body {
   text-shadow: 0 0.4166666667vw 0.2083333333vw rgba(0, 0, 0, 0.6);
   margin: 3.3333333333vw 0 0 0;
 }
+@keyframes radar {
+  0% {
+    transform: rotate(-4deg);
+  }
+  100% {
+    transform: rotate(4deg);
+  }
+}
 .section.step3 .event_button {
   display: flex;
   align-items: center;
@@ -414,6 +452,14 @@ body {
   color: #363636;
   text-align: center;
   padding-left: 3.9583333333vw;
+  transform: translateY(2.0833333333vw);
+  opacity: 0;
+}
+.section.step3 .event_button.ani {
+  opacity: 1;
+  transition-property: opacity, transform;
+  transition-duration: 0.8s;
+  transform: translateY(0);
 }
 .section.step3 .event_button img {
   position: absolute;
@@ -421,6 +467,11 @@ body {
   left: -0.625vw;
   width: 8.9583333333vw;
   height: 8.8541666667vw;
+  transform-origin: right bottom;
+  animation-name: radar;
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 .section.step3 .event_mission {
   width: 100%;
@@ -462,12 +513,6 @@ body {
   display: block;
   width: 10.7291666667vw;
   height: 10.7291666667vw;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 .section.step3 .event_mission li .stamp_taken::after {
   background-image: url("../images/img_stamp_taken.webp");

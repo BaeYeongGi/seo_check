@@ -14,14 +14,6 @@ $imgStampComplete: "../images/img_stamp_complete.webp";
   @return calc($n/$device * 100vw);
 }
 
-@mixin stampAlign {
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%, -50%);
-  background-repeat: no-repeat;
-  background-size:contain;
-}
 
 body {
   letter-spacing:size(0.2);
@@ -101,6 +93,26 @@ body {
       }
     }
   }
+  .stamp_taken, .stamp_complete {
+    &.ani {
+      &::after {
+        opacity:1;
+        transform:translate(-50%, -50%) scale(1);
+      }
+    }
+    &::after {
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%, -50%) scale(1.8);
+      background-repeat: no-repeat;
+      background-size:contain;
+      opacity:0;
+      transition-duration:0.5s;
+      transition-property:transform, opacity;
+      transition-timing-function: cubic-bezier(.37,0,1,.63);
+    }
+  }
   &.step1 {
     height:size(1050);
     .item_wrap {
@@ -110,10 +122,13 @@ body {
       color:$colorDefault_2;
     }
     .item1, .item2 {
-      display:block;
+      display:flex;
+      justify-content: center;
+      align-items: center;
       text-align:center;
       width:size(360);
-      margin-top:size(324);
+      height:size(80);
+      margin-top:size(294);
     }
     .arrow {
       position:absolute;
@@ -130,7 +145,7 @@ body {
       right:size(8);
     }
     .event_notice {
-      margin-top:size(83);
+      margin-top:size(58);
     }
   }
   &.step2 {
@@ -156,12 +171,30 @@ body {
       width:size(205);
       position:absolute;
       top:size(380);
-      left:size(510);
+      left:size(410);
+    }
+    @keyframes penguinSlide {
+      0% {
+        top: size(352);
+        left: size(500);
+      }
+      100% {
+        top: size(510);
+        left:size(390);
+      }
     }
     .penguin {
       width:size(100);
       position:absolute;
-      left:size(600);
+      top:size(352);
+      left:size(500);
+      &.ani {
+        animation-name: penguinSlide;
+        animation-duration: 1.2s;
+        animation-iteration-count: 1;
+        animation-fill-mode:forwards;
+        animation-timing-function: ease-in-out;
+      }
     }
     .event_mission {
       display:flex;
@@ -171,43 +204,38 @@ body {
       margin:size(293) auto 0 auto;
       li {
         display:flex;
-        width:size(372);
+        width: size(372);
+        height: size(104);
         margin-bottom:size(14);
-        &.stamp_taken, &.stamp_complete {
-          .number {
-            position:relative;
-            &::after {
-              content:'';
-              display:block;
-              width:size(83);
-              height:size(83);
-              @include stampAlign;
-            }
-          }
-        }
-        &.stamp_taken {
-          .number {
-            &::after {
-              background-image:url($imgStampTaken);
-            }
-          }
-        }
-        &.stamp_complete {
-          .number {
-            &::after {
-              background-image:url($imgStampComplete);
-            }
-          }
-        }        
         .number {
           display:flex;
           align-items:flex-end;
           justify-content: center;
           width:size(103);
+          height:100%;
           text-align:center;
-          margin-bottom:size(7);
+          padding-bottom:size(7);
           font-size:size(20);
           color:$colorDefault_1;
+          position:relative;
+          &.stamp_taken, &.stamp_complete  {
+            &::after {
+              content:'';
+              display:block;
+              width:size(83);
+              height:size(83);
+            }
+          }
+          &.stamp_taken {
+            &::after {
+              background-image:url($imgStampTaken);
+            }
+          }
+          &.stamp_complete {
+            &::after {
+              background-image:url($imgStampComplete);
+            }
+          }          
         }
         .content {
           display:flex;
@@ -215,7 +243,7 @@ body {
           justify-content: center;
           flex-direction: column;
           width:size(268);
-          height:size(104);
+          height:100%;
           text-align:center;
           font-size:size(20);
           line-height:size(26);
@@ -255,6 +283,9 @@ body {
           font-weight:700;
         }
       }
+      @keyframes gauge {
+
+      }
       .gauge {
         display:block;
         height:100%;
@@ -264,6 +295,11 @@ body {
         left:0;
         top:0;
         border:size(2) solid #fff;
+        width:0;
+        &.ani {
+        
+          transition:all 0.2s;
+        }
         &::after {
           content:'';
           display:block;
@@ -302,7 +338,6 @@ body {
             display:block;
             width:size(87);
             height:size(87);
-            @include stampAlign;
             margin-top:- size(10);
           }
         }
@@ -338,6 +373,14 @@ body {
       text-shadow:0 size(4) size(2) rgba(0,0,0,0.6);
       margin:size(32) 0 0 0;
     }
+    @keyframes radar {
+      0% {
+        transform:rotate(-4deg);
+      }
+      100% {
+        transform:rotate(4deg);
+      }
+    }
     .event_button {
       display:flex;
       align-items: center;
@@ -355,12 +398,27 @@ body {
       color:$colorDefault_1;
       text-align:center;
       padding-left:size(38);
+      transform:translateY(size(20));
+      opacity:0;
+      &.ani {
+        opacity:1;
+
+        transition-property: opacity, transform;
+        transition-duration: 0.8s;
+        transform:translateY(0);
+
+      }
       img {
         position:absolute;
         bottom:size(20);
         left:- size(6);
         width:size(86);
         height:size(85);
+        transform-origin: right bottom;
+        animation-name:radar;
+        animation-duration: 0.6s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
       }
     }
     .event_mission {
@@ -400,7 +458,6 @@ body {
             display:block;
             width:size(103);
             height:size(103);
-            @include stampAlign;
           } 
         }
         .stamp_taken {
