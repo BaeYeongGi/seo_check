@@ -283,9 +283,6 @@ body {
           font-weight:700;
         }
       }
-      @keyframes gauge {
-
-      }
       .gauge {
         display:block;
         height:100%;
@@ -296,9 +293,13 @@ body {
         top:0;
         border:size(2) solid #fff;
         width:0;
-        &.ani {
-        
-          transition:all 0.2s;
+        transition:width 1.4s;
+        &.remove {
+          background:none;
+          border:0;
+          &::after {
+            display:none;
+          }
         }
         &::after {
           content:'';

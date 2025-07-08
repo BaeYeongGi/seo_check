@@ -345,7 +345,6 @@ body {
   padding-right: 0.2083333333vw;
   font-weight: 700;
 }
-@keyframes gauge {}
 .section.step_event .gauge_box .gauge {
   display: block;
   height: 100%;
@@ -356,9 +355,14 @@ body {
   top: 0;
   border: 0.2083333333vw solid #fff;
   width: 0;
+  transition: width 1.4s;
 }
-.section.step_event .gauge_box .gauge.ani {
-  transition: all 0.2s;
+.section.step_event .gauge_box .gauge.remove {
+  background: none;
+  border: 0;
+}
+.section.step_event .gauge_box .gauge.remove::after {
+  display: none;
 }
 .section.step_event .gauge_box .gauge::after {
   content: "";
